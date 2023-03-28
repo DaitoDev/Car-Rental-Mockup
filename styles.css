@@ -1,0 +1,351 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    padding: 0;
+    margin: 0;
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+html{
+  font-family: 'Merriweather', serif;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    opacity: 0.9;
+}
+
+
+/* ALL btn styles */
+.btn{
+    padding: 0.4rem 3rem;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--clr-orange);
+    color: white;
+    transition: all 0.3s ease;
+}
+.btn:hover{
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+
+/* END OF CSS RESET  */
+
+/* CSS CUTOM VARIABLES  */
+:root{
+    /* Colors  */
+    --clr-orange: #95011D;
+}
+
+/* FIRST HERO SECTION  */
+.hero-section{
+    background-image: url('./michael-sala-iQa5F516bAM-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.301);
+    min-height: 100vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.intro{
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    margin-left: 2rem;
+}
+
+
+.intro h1 {
+    max-width:400px ;
+}
+
+.intro p {
+    font-weight: 200;
+    font-size: 14px;
+    margin: 1rem 0;
+}
+
+.features{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 2rem;
+    gap: 3rem;
+}
+
+.feature-item{
+    border: 1px solid rgba(255, 255, 255, 0.267);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    background-color: #1b27234d;
+}
+
+.feature-item p{
+    font-weight: 200;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* NAVBAR ======================================= */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding:1rem 2rem;
+}
+
+.logo{
+    height: 50px;
+    width: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.226);
+    border-radius: 8px;
+}
+
+.navigation{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-size: 14px;
+}
+
+/* POPULAR RIDES SECTION  ======================== */
+.popular-rides{
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.popular-header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 2rem;
+}
+
+/* SLIDE SHOW ARE  */
+
+.slideshow{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+
+.slide-card{
+    position: relative;
+    border-radius: 11px;
+    height: 400px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+    margin: 0.5rem;
+}
+
+.slide-img{
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease;
+}
+
+.slide-img:hover{
+    border-radius: 2px;
+    transform: scale(1.05);
+    box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.5);
+}
+
+.slide-title{
+    position: absolute;
+    bottom: 0.5rem;
+    text-align: center;
+    color: white;
+    border-top: 1px solid rgba(255, 255, 255, 0.322);
+}
+
+/* ABOUT SECTION  ======================== */
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: #2e2e2e;
+    height: 400px;
+}
+
+.about-card{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+.title-tag{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    max-width: 50%;
+    color: white;
+}
+
+.title-tag p {
+    font-weight: 200;
+    font-size: 14px;
+}
+.about-img{
+    height: 200px;
+    width: 50%;
+}
+/* GALLERY SECTION =========================================  */
+.gallery{
+    padding: .5rem;
+}
+
+.gallery-heading{
+    margin: 1rem;
+}
+
+.gallery-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.gallery-item{
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.gallery-img{
+    height: 100%;
+    width: 100%;
+}
+
+.gallery-item h4,
+.gallery-item p {
+    position: absolute;
+    bottom: 1rem;
+    left: 2rem;
+    color: white;
+}
+
+.gallery-item h4{
+    bottom: 2.5rem;
+}
+
+.gallery-item:nth-of-type(2),
+.gallery-item:nth-of-type(3){
+    flex-grow: 1;
+    width: 45%;
+}
+
+.gallery-item:nth-last-of-type(1){
+    flex-grow: 2;
+}
+
+/* FOOTER ======================  */
+footer{
+    background-color: #2e2e2e;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 2rem;
+}
